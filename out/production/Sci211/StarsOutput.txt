@@ -1,0 +1,7 @@
+Code a program that will output this in the console:
+
+*
+**
+***
+****
+*****
