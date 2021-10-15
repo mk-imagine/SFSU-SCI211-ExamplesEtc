@@ -1,7 +1,7 @@
 public class Arrays1Exercise{
     
     public static void main(String[] args){
-        int[] rArr = initRandArray();
+        int[] rArr = initRandArray(10, 1, 100);
         dispIntArray(rArr);
         int arraySum = sumArray(rArr);
         int maxNum = maxElement(rArr);
@@ -22,7 +22,7 @@ public class Arrays1Exercise{
     public static void dispIntArray(int[] arr){
         System.out.print("Array contents: [");
         for (int i=0; i<arr.length; i++) {
-            System.out.print(e);
+            System.out.print(arr[i]);
             if (i != arr.length - 1) {
                 System.out.print(", ");
             }
@@ -35,7 +35,7 @@ public class Arrays1Exercise{
         for (int e: arr) {
             sum += e;
         }
-        return e;
+        return sum;
     }
 
     public static int maxElement(int[] arr){
@@ -45,7 +45,7 @@ public class Arrays1Exercise{
                 maxNum = e;
             }
         }
-        return e;
+        return maxNum;
     }
 
     public static int firstIndexOfElement(int num, int[] arr){
