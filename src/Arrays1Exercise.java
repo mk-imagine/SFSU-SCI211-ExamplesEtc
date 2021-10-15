@@ -16,6 +16,9 @@ public class Arrays1Exercise{
         for (int e: arr){
             e = (int)(Math.random() * (max - min)) + min;
         }
+        for (int num : arr) {
+            System.out.println(num);
+        }
         return arr;
     }
 

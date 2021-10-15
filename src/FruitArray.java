@@ -5,22 +5,36 @@ public class FruitArray {
         int size = 10;
         String[] fruits = getFruitArray(size);
         displayFruitArray(fruits);
-        int appleCount = getFruitCount("apple", fruits);
-        System.out.println("We have " + appleCount + " apple(s) in our array.");
+        System.out.println();
+        printFruitsWithCount(fruits);
     }
 
     public static String getRandomFruit() {
-        String fruit;
+        String fruit = "";
         int randomNum = (int) (Math.random() * 7 + 1);
         switch(randomNum) {
-            case 1 -> fruit = "apple";
-            case 2 -> fruit = "banana";
-            case 3 -> fruit = "strawberry";
-            case 4 -> fruit = "grape";
-            case 5 -> fruit = "orange";
-            case 6 -> fruit = "peach";
-            case 7 -> fruit = "watermelon";
-            default -> throw new RuntimeException();
+            case 1 :
+                fruit = "apple";
+                break;
+
+            case 2 :
+                fruit = "banana";
+                break;
+            case 3 :
+                fruit = "strawberry";
+                break;
+            case 4 :
+                fruit = "grape";
+                break;
+            case 5 :
+                fruit = "orange";
+                break;
+            case 6 :
+                fruit = "peach";
+                break;
+            case 7 :
+                fruit = "watermelon";
+                break;
         }
         return fruit;
     }
@@ -44,8 +58,9 @@ public class FruitArray {
 
     public static void printFruitsWithCount(String[] fruits) {
         String[] fruitList = {"apple", "banana", "strawberry", "grape", "orange", "peach", "watermelon"};
-        for (String fruit : fruits) {
-
+        for (String fruit : fruitList) {
+            int count = getFruitCount(fruit, fruits);
+            System.out.println(fruit + ": " + count);
         }
     }
 
