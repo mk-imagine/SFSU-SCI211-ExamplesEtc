@@ -12,5 +12,7 @@ public class Arrays {
             counter++;
         }
         System.out.println("The loop iterated this many times: " + counter);
+
+        double x = Math.PI;
     }
 }
