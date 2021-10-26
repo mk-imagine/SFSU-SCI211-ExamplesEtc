@@ -1,18 +1,20 @@
 public class Arrays {
-    public static void main(String[] args) {
-        int evenCounter = 0;
-        int counter = 0;
-        while (evenCounter < 10) {
-            int rand = (int) (Math.random() * 100);
-//            System.out.println(rand*2);
-            if (rand % 2 == 0) {
-                System.out.println(rand);
-                evenCounter++;
-            }
-            counter++;
-        }
-        System.out.println("The loop iterated this many times: " + counter);
 
-        double x = Math.PI;
+    public static void main(String[] args) {
+        double d = add(24.354675, 23.47561561);
+        double e = add(15.553, 17.3374);
     }
+
+    public static double add(double a, double b){
+        return a + b;
+    }
+
+    public static void greeting(String fname, String lname){
+        System.out.println()
+    }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
 }
