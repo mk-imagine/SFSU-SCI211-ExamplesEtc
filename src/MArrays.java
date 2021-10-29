@@ -4,7 +4,8 @@ public class MArrays {
         int[] columnsResults = addColumns(arr);
         System.out.println("------- Printing out the array -------");
         printArray(arr);
-        System.out.println("------- Printing out the columns sums -------");
+        System.out.println();
+        printDiagonal(arr);
     }
 
     public static int[][] init2dArray(int m, int n) {
@@ -68,5 +69,15 @@ public class MArrays {
             }
         }
         return results;
+    }
+
+    public static void printDiagonal(int[][] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            for (int space = 0; space < i; space++) {
+                System.out.print("\t");
+            }
+            System.out.print(arr[i][i]);
+            System.out.println();
+        }
     }
 }
