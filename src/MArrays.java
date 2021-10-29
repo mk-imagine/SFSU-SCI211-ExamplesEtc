@@ -1,9 +1,10 @@
 public class MArrays {
     public static void main(String[] args){
         int[][] arr = init2dArray(10, 10);
+        int[] columnsResults = addColumns(arr);
         System.out.println("------- Printing out the array -------");
         printArray(arr);
-        addColumns(arr);
+        System.out.println("------- Printing out the columns sums -------");
     }
 
     public static int[][] init2dArray(int m, int n) {
@@ -61,9 +62,6 @@ public class MArrays {
 
     public static int[] addColumns(int[][] array) {
         int[] results = new int[10];
-        for (int i = 0; i < results.length; i++) {
-            results[i] = 0;
-        }
         for (int columns = 0; columns < array.length; columns++) {
             for (int rows = 0; rows < array[0].length; rows++) {
                 results[rows] += array[columns][rows];
