@@ -1,8 +1,11 @@
 public class MArrays {
     public static void main(String[] args){
-        int[][] arr = init2dArray(10, 10);
+        int[][] arr = init2dArray(5, 10);
         System.out.println("------- Printing out the array -------");
         printArray(arr);
+        int[] rowSums = addRows(arr);
+        printArray(rowSums);
+        System.out.print("Max Element: " + maxElement(arr) + "\n");
     }
 
     public static int[][] init2dArray(int m, int n) {
@@ -48,7 +51,14 @@ public class MArrays {
         }
         return max;
     }
-    
+
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+    }
+
     public static void printArray(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[0].length; j++) {
@@ -56,5 +66,12 @@ public class MArrays {
             }
             System.out.println();
         }
+    }
+
+    public static void printFirstRow(int[][] array) {
+        for (int i = 0; i < array[0].length; i++) {
+            System.out.print(array[0][i] + "\t");
+        }
+        System.out.println();
     }
 }
