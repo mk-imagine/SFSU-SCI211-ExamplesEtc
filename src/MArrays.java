@@ -5,11 +5,45 @@ public class MArrays {
 
     public static int[][] init2dArray(int m, int n) {
         int[][] arr = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                arr[m][n] = (int)(Math.random() * 99);
+        for (int row = 0; row < m; row++) {
+            for (int col = 0; col < n; col++) {
+                arr[row][col] = (int)(Math.random() * 99);
             }
         }
         return arr;
+    }
+
+    public static int addAll(int[][] arr) {
+        int sum = 0;
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[0].length; col++) {
+                sum += arr[row][col];
+            }
+        }
+        return sum;
+    }
+
+    public static int[] addRows(int[][] arr) {
+        int[] rowSums = new int[arr.length];
+        for (int row = 0; row < arr.length; row++) {
+            int tempSum = 0;
+            for (int col = 0; col < arr[0].length; col++) {
+                tempSum += arr[row][col];
+            }
+            rowSums[row] = tempSum;
+        }
+        return rowSums;
+    }
+
+    public static int maxElement(int[][] arr) {
+        int max = 0;
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[0].length; col++) {
+                if (arr[row][col] > max) {
+                    max = arr[row][col];
+                }
+            }
+        }
+        return max;
     }
 }
