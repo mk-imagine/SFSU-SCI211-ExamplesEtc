@@ -10,7 +10,7 @@ public class Arrays {
     }
 
     public static void greeting(String fname, String lname){
-        System.out.println()
+        System.out.println();
     }
 
     public static boolean isEven(int num) {
