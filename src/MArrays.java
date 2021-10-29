@@ -6,6 +6,8 @@ public class MArrays {
         int[] rowSums = addRows(arr);
         printArray(rowSums);
         System.out.print("Max Element: " + maxElement(arr) + "\n");
+        int[] columnsResults = addColumns(arr);
+        System.out.println("------- Printing out the columns sums -------");
     }
 
     public static int[][] init2dArray(int m, int n) {
@@ -60,9 +62,9 @@ public class MArrays {
     }
 
     public static void printArray(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                System.out.print(array[i][j] + "\t");
+        for (int rows = 0; rows < array.length; rows++) {
+            for (int columns = 0; columns < array[0].length; columns++) {
+                System.out.print(array[rows][columns] + "\t");
             }
             System.out.println();
         }
@@ -73,5 +75,15 @@ public class MArrays {
             System.out.print(array[0][i] + "\t");
         }
         System.out.println();
+    }
+
+    public static int[] addColumns(int[][] array) {
+        int[] results = new int[10];
+        for (int columns = 0; columns < array.length; columns++) {
+            for (int rows = 0; rows < array[0].length; rows++) {
+                results[rows] += array[columns][rows];
+            }
+        }
+        return results;
     }
 }
