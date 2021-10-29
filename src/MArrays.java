@@ -69,11 +69,6 @@ public class MArrays {
                 results[rows] += array[columns][rows];
             }
         }
-        System.out.println("------- show the results -------");
-        for (int i = 0; i < results.length; i++) {
-            System.out.print(results[i] + " ");
-        }
-        System.out.println();
         return results;
     }
 }
