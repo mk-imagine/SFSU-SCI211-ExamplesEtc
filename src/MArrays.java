@@ -1,11 +1,21 @@
 public class MArrays {
     public static void main(String[] args){
-        int[][] arr = init2dArray(10, 10);
-        int[] columnsResults = addColumns(arr);
+        int[][] arr = init2dArray(5, 5);
         System.out.println("------- Printing out the array -------");
         printArray(arr);
         System.out.println();
+        System.out.println("------- Printing out the array diagonally -------");
         printDiagonal(arr);
+        System.out.println();
+        System.out.println("------- Printing out the sums of the row -------");
+        int[] rowSums = addRows(arr);
+        printArray(rowSums);
+        System.out.println();
+        System.out.println("------- Printing out the sums of the columns -------");
+        int[] columnSums = addColumns(arr);
+        printArray(columnSums);
+        System.out.println();
+        System.out.print("Max Element: " + maxElement(arr) + "\n");
     }
 
     public static int[][] init2dArray(int m, int n) {
@@ -51,7 +61,14 @@ public class MArrays {
         }
         return max;
     }
-    
+
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+    }
+
     public static void printArray(int[][] array) {
         for (int rows = 0; rows < array.length; rows++) {
             for (int columns = 0; columns < array[0].length; columns++) {
@@ -61,8 +78,15 @@ public class MArrays {
         }
     }
 
+    public static void printFirstRow(int[][] array) {
+        for (int i = 0; i < array[0].length; i++) {
+            System.out.print(array[0][i] + "\t");
+        }
+        System.out.println();
+    }
+
     public static int[] addColumns(int[][] array) {
-        int[] results = new int[10];
+        int[] results = new int[array.length];
         for (int columns = 0; columns < array.length; columns++) {
             for (int rows = 0; rows < array[0].length; rows++) {
                 results[rows] += array[columns][rows];
