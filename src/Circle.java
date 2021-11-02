@@ -1,39 +1,46 @@
 public class Circle {
-    private double radius;
-    private int x, y;
+    public int radius;
+    public int x;
+    private int y;
 
-    public Circle(){
-        this.radius = 0;
-        this.x = 0;
-        this.y = 0;
+    public Circle() {
+        this.x = 1;
+        this.y = 1;
+        this.radius = 1;
     }
 
-    public Circle(double radius, int x, int y){
-        this.radius = radius;
+    public Circle(int x, int y, int r){
         this.x = x;
+        this.y = y;
+        this.radius = r;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public int getY() {
+        return this.y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
         this.y = y;
     }
 
-    public double getRadius(){
-        return this.radius;
+    public double getArea() {
+        return Math.PI * Math.pow(this.radius, 2);
     }
 
-    public void setRadius(double radius){
-        this.radius = radius;
+    public boolean touch(Circle a){
+        return Math.sqrt(Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.getY(),2)) < this.radius + a.radius;
     }
 
-    public double getArea(){
-        return this.radius * this.radius * Math.PI;
-    }
-
-    public void setLoc(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
-
-    public double distance(Circle other){
-        return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+    @Override
+    public String toString(){
+        return "X coordinate: " + this.x + "\nY coordinate: " + this.y + "\nRadius: " + this.radius;
     }
 }
-
-

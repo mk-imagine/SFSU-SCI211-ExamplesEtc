@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 public class MArrays {
     public static void main(String[] args){
         int[][] arr = init2dArray(5, 5);
@@ -69,7 +71,7 @@ public class MArrays {
         System.out.println();
     }
 
-    public static void printArray(int[][] array) {
+    public static void printArray(int[] [] array) {
         for (int rows = 0; rows < array.length; rows++) {
             for (int columns = 0; columns < array[0].length; columns++) {
                 System.out.print(array[rows][columns] + "\t");
