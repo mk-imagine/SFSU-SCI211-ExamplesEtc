@@ -1,9 +1,8 @@
-public class Bird {
+public class Bird extends Animal{
     private String name;
     private boolean canFly = true;
     private boolean canSwim = false;
     private String color;
-    private double weight;
     private double length;
     private double direction;
     private double speed;
@@ -13,7 +12,7 @@ public class Bird {
     public Bird(){
         this.name = "Woodstock";
         this.color = "black";
-        this.weight = 0.1;
+        super.weight = 0.1;
         this.length = 3;
         this.x = 0;
         this.y = 0;
@@ -52,6 +51,10 @@ public class Bird {
     public void move(){
         this.x = (int) (Math.cos(Math.toRadians(this.direction)) * this.speed);
         this.y = (int) (Math.sin(Math.toRadians(this.direction)) * this.speed);
+    }
+
+    public void sayHello(){
+
     }
 
     @Override

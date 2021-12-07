@@ -1,11 +1,10 @@
-public class Circle {
+public class Circle extends Shape{
     public int radius;
-    public int x;
-    private int y;
+    public int[] integerarray;
 
     public Circle() {
-        this.x = 1;
-        this.y = 1;
+        super.x = 0;
+        super.y = 0;
         this.radius = 1;
     }
 
@@ -35,8 +34,12 @@ public class Circle {
         return Math.PI * Math.pow(this.radius, 2);
     }
 
-    public boolean touch(Circle a){
+    public boolean touches(Circle a){
         return Math.sqrt(Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.getY(),2)) < this.radius + a.radius;
+    }
+
+    public boolean touches(Square a){
+        return false;
     }
 
     @Override

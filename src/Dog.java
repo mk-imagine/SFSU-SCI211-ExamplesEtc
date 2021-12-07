@@ -1,4 +1,4 @@
-public class Dog {
+public class Dog extends Animal{
     private String name;
     private String breed;
     private String color;
@@ -6,7 +6,8 @@ public class Dog {
     private boolean hasEars = true;
     private double walkingSpeed;
     private double runningSpeed;
-    private double weight;
+    private int x = 0;
+    private int y = 0;
 
     public Dog(){
         this.name = "Spot";
@@ -35,6 +36,17 @@ public class Dog {
 
     public void setName(String name){
         this.name = name;
+    }
+
+    public void sayHello(){
+
+    }
+
+    @Override
+    public String toString(){
+        return "\nName: " + this.name + "\nColor: " +
+                this.color + "\nLocation:\n\tx-coord: " +
+                this.x + "\n\ty-coord: " + this.y;
     }
 
 }

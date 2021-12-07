@@ -1,0 +1,83 @@
+\documentclass[9pt]{article}
+\usepackage{multicol, listings, color, geometry}
+
+\geometry{margin = 0.75in}
+
+\setlength{\columnseprule}{1pt}
+\setlength{\parindent}{0em}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+\begin{multicols}{2}
+PracticeProblem.java file:
+\begin{lstlisting}[language=Java]
+public class PracticeProblem {
+	public static void main(String[] args) {
+		int[] a, b;
+		a = new int[2];
+		a[0] = 1; a[1] = 2;
+		b = a;
+		process(a);
+		System.out.println("a[0] = " + a[0]);
+		System.out.println("b[0] = " + b[0]);
+		Coin x, y;
+		x = new Coin(5);
+		y = new Coin(25);
+		x = y;
+		y.split();
+		System.out.println("x = " + x.getValue());
+		System.out.println("y = " + y.getValue());
+	}
+	
+	public static void process(int[] z) {
+		for (int i = 0; i < z.length; i++) {
+			z[i] += 5;
+		}
+	}
+}
+\end{lstlisting}
+\vspace{5mm}
+Coin.java file:
+\begin{lstlisting}[language=Java]
+public class Coin {
+	private int value;
+	public Coin(int v) {
+		value = v;
+	}
+	public int getValue() {
+		return value;
+	}
+	public void split() {
+		value = value/2;
+	}
+}
+\end{lstlisting}
+\vfill
+\columnbreak
+Determine the code output:
+\hfill\vspace{5mm}
+
+Console:
+
+\end{multicols}
+\end{document}

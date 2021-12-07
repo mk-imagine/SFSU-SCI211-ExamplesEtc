@@ -1,0 +1,52 @@
+\documentclass[9pt]{article}
+\usepackage{multicol, listings, color, geometry}
+
+\geometry{margin = 0.75in}
+
+\setlength{\columnseprule}{1pt}
+\setlength{\parindent}{0em}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+Write code for the following method:
+\begin{lstlisting}[language=Java]
+// Method: pyramid
+// Produces console output as described below.
+// Must be able to produce output of the following form with any integer as a parameter
+// pyramid(5); // will produce the output:
+// -----1-----
+// ----333----
+// ---55555---
+// --7777777--
+// -999999999-
+// pyramid(3); // will produce the output:
+// ---1---
+// --333--
+// -55555-
+// (Non-positive values passed to method will produce no output.)
+
+public static void pyramid(int size) {
+	// Implement your code
+}
+\end{lstlisting}
+\end{document}
