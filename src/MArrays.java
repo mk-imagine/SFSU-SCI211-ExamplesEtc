@@ -1,5 +1,3 @@
-import org.jetbrains.annotations.NotNull;
-
 public class MArrays {
     public static void main(String[] args){
         int[][] arr = init2dArray(5, 5);
