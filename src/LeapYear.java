@@ -17,7 +17,7 @@ public class LeapYear {
 
         // Request month and year input
         System.out.println("Determine the number of days in a month in a particular year.");
-        System.out.println("Please enter a month and year (MM/YYYY): ");
+        System.out.print("Please enter a month and year (MM/YYYY): ");
         String date = input.nextLine(); // input.nextLine() retrieves the entire String in
                                         // the line preceding the moment the user presses ENTER
 
