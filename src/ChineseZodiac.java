@@ -3,8 +3,8 @@ public class ChineseZodiac {
         // determine the output for the following variable values:
         // int year = 12;
         // int year = 9;
-        // char year = 'a';
-        int year = 6;
+        char year = 'a';
+        // int year = 6;
 
         switch (year % 12) {
             case 'a':

@@ -1,0 +1,103 @@
+\documentclass[9pt]{article}
+\usepackage{multicol, listings, color, geometry}
+
+\geometry{margin = 0.75in}
+
+\setlength{\columnseprule}{1pt}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{6pt}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+\begin{multicols}{2}
+PracticeProblem.java file:
+\begin{lstlisting}[language=Java]
+public class PracticeProblem {
+	public static void main(String[] args) {
+		int[] a, b;
+		a = new int[2];
+		a[0] = 1; a[1] = 2;
+		b = a;
+		process(a);
+		System.out.println("a[0] = " + a[0]);
+		System.out.println("b[0] = " + b[0]);
+		Coin x, y;
+		x = new Coin(5);
+		y = new Coin(25);
+		x = y;
+		y.split();
+		System.out.println("x = " + x.getValue());
+		System.out.println("y = " + y.getValue());
+	}
+	
+	public static void process(int[] z) {
+		for (int i = 0; i < z.length; i++) {
+			z[i] += 5;
+		}
+	}
+}
+\end{lstlisting}
+\vspace{5mm}
+Coin.java file:
+\begin{lstlisting}[language=Java]
+public class Coin {
+	private int value;
+	public Coin(int v) {
+		value = v;
+	}
+	public int getValue() {
+		return value;
+	}
+	public void split() {
+		value = value/2;
+	}
+}
+\end{lstlisting}
+\vfill
+\columnbreak
+\textit{Determine the code output:}
+
+This is a problem that covers references to objects.
+
+First we are declaring two integer arrays on line 3 of the PracticeProblem.java file/class. Then we initialize array \emph{a} as a two element integer array and assign the integers 1 and 2, respectively, to index 0 and 1 of the array. Next, we reference our integer array \emph{b} to array \emph{a}.  Since \emph{a} is an object, \emph{b} is referencing the same object.  Hence, any changes to \emph{a} will be reflected in \emph{b}.  Once we run the method process(a), the values in index 0 and 1 will be 6 and 7, respectively.  So, the output for both \emph{a[0]} and \emph{b[0]} will be the same (e.g. 6).
+
+The outputs will be the same for x and y for the same reason as the outputs are the same for a[0] and b[0].
+
+NOTE: If you are using the \emph{new} keyword, any variable assigned to that same object will share any changes that happen to the object.  If the data type is primitive (e.g. int, double, etc), when you reference it, the variable references the value of the primitive.   For example: after the following code,
+\begin{lstlisting}[language=Java]
+int x = 1; int y = x;
+x += 5;
+\end{lstlisting}
+we end with x = 6 and y = 1.
+\hfill\vspace{5mm}
+
+Console output:
+
+\begin{lstlisting}[language=Java]
+a[0] = 6
+b[0] = 6
+x = 12
+y = 12
+\end{lstlisting}
+\end{multicols}
+\end{document}
