@@ -1,6 +1,6 @@
 public class MArrays {
     public static void main(String[] args){
-        int[][] arr = init2dArray(5, 10);
+        int[][] arr = init2dArray(10, 10);
         System.out.println("------- Printing out the array -------");
         printArray(arr);
         int[] rowSums = addRows(arr);
