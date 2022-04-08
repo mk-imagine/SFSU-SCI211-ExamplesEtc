@@ -1,15 +1,18 @@
-public class Week10 {
+public class MethodsExercise {
     public static void main(String[] args) {
         System.out.println("Testing add(1.25, 2.45): " + add(1.25, 2.45));
-        System.out.print("Testing greeting(\"Tunni\", \"Chiang\"): ");
-        greeting("Tunni", "Chiang");
+        System.out.print("Testing greeting(\"John\", \"Doe\"): ");
+        greeting("John", "Doe");
         System.out.println("Testing isEven(8): " + isEven(8));
         System.out.println("Testing isEven(9): " + isEven(9));
-        double x = 2.5, y=3.24, z=5.89, r=2.367, a=1.25, b=15.2, s=4.58;
-        System.out.println(pow(z,3));
+        double a = 2.45;
+        int b = 3;
+        double x = 2.5, y = 3.24, z = 5.89, r = 2.367, x0 = 2.5, y0 = 3.24, r0 = 2.367,
+                x1 = 1.25, y1 = 15.2, r1 = 4.58;
+        System.out.println(pow(a,b));
         System.out.println(volumeDiffCubSph(x, y, z, r));
-        System.out.println(distance(x,y,a,b));
-        System.out.println(circlesTouch(x, y, r, a, b, s));
+        System.out.println(distance(x0,y0,x1,y1));
+        System.out.println(circlesTouch(x0, y0, r0, x1, y1, r1));
     }
 
     public static double add (double num1, double num2) {
@@ -42,13 +45,13 @@ public class Week10 {
         }
     }
 
-    public static double distance(double x, double y, double a, double b) {
-        double dist = Math.sqrt(pow(a - x, 2) + (pow(b-y, 2)));
+    public static double distance(double x0, double y0, double x1, double y1) {
+        double dist = Math.sqrt(pow(x1 - x0, 2) + (pow(y1 - y0, 2)));
         return dist;
     }
 
-    public static boolean circlesTouch(double x, double y, double r, double a, double b, double s) {
-        return distance(x,y,a,b) < r + s;
+    public static boolean circlesTouch(double x0, double y0, double r0, double x1, double y1, double r1) {
+        return distance(x0,y0,x1,y1) < r0 + r1;
     }
 
 }

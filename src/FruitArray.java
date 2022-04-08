@@ -16,7 +16,6 @@ public class FruitArray {
             case 1 :
                 fruit = "apple";
                 break;
-
             case 2 :
                 fruit = "banana";
                 break;
