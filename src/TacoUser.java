@@ -18,8 +18,14 @@ public class TacoUser {
         halfEatenTaco.eat();
         genericTaco.eat();
 
-        System.out.print(beefTaco.name + " " + beefTaco.amountLeft + "\n");
+        System.out.print(beefTaco.name + " " + beefTaco.protein + " " + beefTaco.amountLeft + "\n");
         System.out.print(halfEatenTaco.name + " " + halfEatenTaco.amountLeft + "\n");
         System.out.print(genericTaco.name + " " + genericTaco.amountLeft + "\n");
+
+        Taco smashedTaco = beefTaco.smashTaco(genericTaco);
+        
+        System.out.print(beefTaco.name + " " + beefTaco.protein + " " + beefTaco.amountLeft + "\n");
+        
+        System.out.print(smashedTaco.name + " " + smashedTaco.protein + " " + smashedTaco.amountLeft + "\n");
     }
 }
