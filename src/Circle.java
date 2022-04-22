@@ -1,6 +1,5 @@
 public class Circle extends Shape{
-    public int radius;
-    public int[] integerarray;
+    public double radius;
 
     public Circle() {
         super.x = 0;
@@ -20,6 +19,10 @@ public class Circle extends Shape{
 
     public int getY() {
         return this.y;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     public void setX(int x) {

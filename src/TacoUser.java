@@ -21,5 +21,10 @@ public class TacoUser {
         System.out.println("\n" + beefTaco.toString());
         // System.out.println("\n" + halfEatenTaco.toString());
         // System.out.println("\n" + genericTaco.toString());
+        Taco smashedTaco = beefTaco.smashTaco(genericTaco);
+        
+        System.out.print(beefTaco.toString());
+        
+        System.out.print(smashedTaco.toString());
     }
 }

@@ -36,6 +36,14 @@ public class Taco{
         }
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString(){
         return "Name: " + this.name + 
@@ -44,5 +52,38 @@ public class Taco{
             "\nVegetables: " + this.veg +
             "\nCheese: " + this.cheese +
             "\nQuantity Left: " + this.amountLeft;
+    }
+
+    // beefTaco.smashTaco(genericTaco)
+    // public void smashTaco(Taco taco2) {
+    //     this.name = "Smashed Taco";
+    //     this.protein = this.protein + ", " + taco2.protein;
+    //     this.tortilla = this.tortilla + ", " + taco2.tortilla;
+    //     String[] newVeg = new String[this.veg.length + taco2.veg.length];
+    //     for (int i = 0; i < this.veg.length; i++) {
+    //         newVeg[i] = this.veg[i];
+    //     }
+    //     for (int i = 0; i < taco2.veg.length; i++) {
+    //         newVeg[i + this.veg.length] = taco2.veg[i];
+    //     }
+    //     this.veg = newVeg;
+    //     this.cheese = this.cheese + ", " + taco2.cheese;
+    //     this.amountLeft = this.amountLeft + taco2.amountLeft;
+    // }
+
+    public Taco smashTaco(Taco taco2) {
+        String[] newVeg = new String[this.veg.length + taco2.veg.length];
+        for (int i = 0; i < this.veg.length; i++) {
+            newVeg[i] = this.veg[i];
+        }
+        for (int i = 0; i < taco2.veg.length; i++) {
+            newVeg[i + this.veg.length] = taco2.veg[i];
+        }
+        Taco smashedTaco = new Taco(
+            "Smashed Taco", this.protein + ", " + taco2.protein, this.tortilla + ", " + taco2.tortilla,
+            newVeg, this.cheese + ", " + taco2.cheese, this.amountLeft + taco2.amountLeft
+        );
+
+        return smashedTaco;
     }
 }
