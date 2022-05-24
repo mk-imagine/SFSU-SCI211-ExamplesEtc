@@ -1,34 +1,39 @@
-import java.util.Scanner;
-
 public class ScratchWork {
-
     public static void main(String[] args) {
-        int[] numArray = new int[10];
+        GradeItem a = new EssayQuestion(15.5, 10);
+        a.display();
+        a.displaySuper();
+    }
+}
 
-        for (int i = 0; i < numArray.length; i++) {
-            numArray[i] = i;
-            System.out.println(numArray[i]);
-        }
+class GradeItem{
+    public double num;
+
+    public GradeItem(double num) {
+        this.num = num;
     }
 
-    public static int sumArray(int[] arr) {
-        int sum = 0;
+    public void display() {
+        System.out.println("GradeItem");
+    };
 
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
-        }
 
-        return sum;
+}
+
+class EssayQuestion extends GradeItem{
+    
+    public int length;
+
+    EssayQuestion(double num, int len) {
+        super(num);
+        this.length = len;
     }
 
-    public static int[] sumSameIndexArray(int[] arr1, int[] arr2) {
-        int[] sumArray = new int[arr1.length];
-
-        for (int i = 0; i < arr1.length; i++) {
-            sumArray[i] = arr1[i] + arr2[i];
-        }
-
-        return sumArray;
+    public void display() {
+        System.out.println("essay question");
     }
 
+    public void displaySuper() {
+        super.display();
+    }
 }

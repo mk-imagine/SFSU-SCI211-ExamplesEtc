@@ -1,47 +1,25 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Taco{
-    private String name;
-    private String protein;
+public class Taco extends Food implements Quantity, Eats{
     private String tortilla;
-    private ArrayList<String> veg = new ArrayList<String>();
-    private String cheese;
-    private int amountLeft;
 
     public Taco() {
-        this.name = "genericTaco";
-        this.protein = "chicken";
+        super.name = "genericTaco";
+        super.protein = "chicken";
         this.tortilla = "corn";
-        this.veg.add("lettuce");
-        this.cheese = "american";
-        this.amountLeft = 100;
+        super.veg.add("lettuce");
+        super.cheese = "american";
+        super.amountLeft = 100;
     }
 
     public Taco(String name, String protein, String tortilla, String[] veg, String cheese, int amountLeft) {
-        this.name = name;
-        this.protein = protein;
+        super.name = name;
+        super.protein = protein;
         this.tortilla = tortilla;
-        this.veg.addAll(Arrays.asList(veg));
-        this.cheese = cheese;
-        this.amountLeft = amountLeft;
-    }
-
-    public void eat() {
-        this.name = "Partially eaten " + this.name;
-        if (this.amountLeft <= 0) {
-            this.amountLeft = 0;
-        } else {
-            this.amountLeft = this.amountLeft - 10;
-        }
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        super.veg.addAll(Arrays.asList(veg));
+        super.cheese = cheese;
+        super.amountLeft = amountLeft;
     }
 
     @Override
@@ -72,12 +50,12 @@ public class Taco{
     // }
 
     public Taco smashTaco(Taco taco2) {
-        String[] newVeg = new String[this.veg.length + taco2.veg.length];
-        for (int i = 0; i < this.veg.length; i++) {
-            newVeg[i] = this.veg[i];
+        String[] newVeg = new String[this.veg.size() + taco2.veg.size()];
+        for (int i = 0; i < this.veg.size(); i++) {
+            newVeg[i] = this.veg.get(i);
         }
-        for (int i = 0; i < taco2.veg.length; i++) {
-            newVeg[i + this.veg.length] = taco2.veg[i];
+        for (int i = 0; i < taco2.veg.size(); i++) {
+            newVeg[i + this.veg.size()] = taco2.veg.get(i);
         }
         Taco smashedTaco = new Taco(
             "Smashed Taco", this.protein + ", " + taco2.protein, this.tortilla + ", " + taco2.tortilla,
@@ -85,5 +63,13 @@ public class Taco{
         );
 
         return smashedTaco;
+    }
+
+    public Taco smashTaco() {
+        return this;
+    };
+
+    public int getAmountLeft() {
+        return this.amountLeft;
     }
 }

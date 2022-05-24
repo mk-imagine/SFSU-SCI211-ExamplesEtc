@@ -5,12 +5,11 @@ public class TacoUser {
         vegArr[1] = "tomato";
 
         Taco beefTaco = new Taco("Beef Taco w/ Jack", "Beef", "Flour", vegArr, "cheddar", 10);
-        Taco halfEatenTaco = new Taco("Half Eaten Taco", "Beef", "Flour", vegArr, "cheddar", 50);
+        Ceviche ceviche = new Ceviche();
         Taco genericTaco = new Taco();
-        
 
-        System.out.println(beefTaco.toString());
-        // System.out.println("\n" + halfEatenTaco.toString());
+        System.out.println(beefTaco);
+        System.out.println("\n" + ceviche);
         // System.out.println("\n" + genericTaco.toString());
         
         beefTaco.eat();
@@ -18,13 +17,13 @@ public class TacoUser {
         // halfEatenTaco.eat();
         // genericTaco.eat();
 
-        System.out.println("\n" + beefTaco.toString());
+        System.out.println("\n" + beefTaco);
         // System.out.println("\n" + halfEatenTaco.toString());
         // System.out.println("\n" + genericTaco.toString());
         Taco smashedTaco = beefTaco.smashTaco(genericTaco);
         
-        System.out.print(beefTaco.toString());
+        System.out.print(beefTaco);
         
-        System.out.print(smashedTaco.toString());
+        System.out.print(smashedTaco);
     }
 }
