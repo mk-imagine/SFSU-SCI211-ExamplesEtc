@@ -1,3 +1,5 @@
+package Stuff;
+
 public class TrainCar {
     int id;             // this.id
     String contents;

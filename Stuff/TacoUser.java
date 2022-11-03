@@ -1,10 +1,12 @@
+package Stuff;
+
 public class TacoUser {
     public static void main(String[] args) {
         String[] vegArr = new String[2];
         vegArr[0] = "lettuce";
         vegArr[1] = "tomato";
 
-        Taco beefTaco = new Taco("Beef Taco w/ Jack", "Beef", "Flour", vegArr, "cheddar", 10);
+        Taco beefTaco = new Taco("Beef Stuff.Taco w/ Jack", "Beef", "Flour", vegArr, "cheddar", 10);
         Ceviche ceviche = new Ceviche();
         Taco genericTaco = new Taco();
 

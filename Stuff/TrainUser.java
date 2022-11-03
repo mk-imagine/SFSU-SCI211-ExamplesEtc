@@ -1,3 +1,5 @@
+package Stuff;
+
 public class TrainUser {
     public static void main(String[] args) {
         TrainCar car1 = new TrainCar(1);

@@ -1,3 +1,5 @@
+package Stuff;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -29,12 +31,12 @@ public class Taco extends Food implements Quantity, Eats{
             "\nTortilla: " + this.tortilla + 
             "\nVegetables: " + this.veg +
             "\nCheese: " + this.cheese +
-            "\nQuantity Left: " + this.amountLeft;
+            "\nStuff.Quantity Left: " + this.amountLeft;
     }
 
     // beefTaco.smashTaco(genericTaco)
-    // public void smashTaco(Taco taco2) {
-    //     this.name = "Smashed Taco";
+    // public void smashTaco(Stuff.Taco taco2) {
+    //     this.name = "Smashed Stuff.Taco";
     //     this.protein = this.protein + ", " + taco2.protein;
     //     this.tortilla = this.tortilla + ", " + taco2.tortilla;
     //     String[] newVeg = new String[this.veg.length + taco2.veg.length];
@@ -58,7 +60,7 @@ public class Taco extends Food implements Quantity, Eats{
             newVeg[i + this.veg.size()] = taco2.veg.get(i);
         }
         Taco smashedTaco = new Taco(
-            "Smashed Taco", this.protein + ", " + taco2.protein, this.tortilla + ", " + taco2.tortilla,
+            "Smashed Stuff.Taco", this.protein + ", " + taco2.protein, this.tortilla + ", " + taco2.tortilla,
             newVeg, this.cheese + ", " + taco2.cheese, this.amountLeft + taco2.amountLeft
         );
 

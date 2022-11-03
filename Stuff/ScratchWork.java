@@ -1,3 +1,5 @@
+package Stuff;
+
 public class ScratchWork {
     public static void main(String[] args) {
         GradeItem a = new EssayQuestion(15.5, 10);
@@ -14,7 +16,7 @@ class GradeItem{
     }
 
     public void display() {
-        System.out.println("GradeItem");
+        System.out.println("Stuff.GradeItem");
     };
 
 

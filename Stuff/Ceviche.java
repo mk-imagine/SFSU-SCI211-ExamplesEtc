@@ -1,11 +1,11 @@
-
+package Stuff;
 
 public class Ceviche extends Food {
     String sauce;
     String wrap;
 
     Ceviche() {
-        super.name = "Generic Ceviche";
+        super.name = "Generic Stuff.Ceviche";
         super.protein = "Raw white fish";
         super.veg.add("corn");
         super.veg.add("sweet potato");
@@ -21,6 +21,6 @@ public class Ceviche extends Food {
             "\nWrap: " + this.wrap + 
             "\nVegetables: " + this.veg +
             "\nSauce: " + this.sauce +
-            "\nQuantity Left: " + this.amountLeft;
+            "\nStuff.Quantity Left: " + this.amountLeft;
     }
 }

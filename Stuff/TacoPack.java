@@ -1,3 +1,4 @@
+package Stuff;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,7 @@ public class TacoPack {
         pack[2][0] = "Tortilla";
         pack[3][0] = "Vegetables";
         pack[4][0] = "Cheese";
-        pack[5][0] = "Quantity Left";
+        pack[5][0] = "Stuff.Quantity Left";
 
         for (int i = 0; i < tacopack.size(); i++) {
             // pack[0][i - 1] = tacopack.get(i).name;
