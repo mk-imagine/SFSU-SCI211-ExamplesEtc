@@ -1,3 +1,4 @@
+package Stuff;
 public class PalindromeLC {
     public static boolean main(String[] args){
         int num = 23455432;
