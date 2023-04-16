@@ -1,11 +1,10 @@
-import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class BMICalculator {
   private static final String mashoufAddress = "755 Font Blvd.";
-  private static final String ANSI_YELLOW = "\u001B[33m";
+  private static final String ANSI_YELLOW = "\u001B[30;43m";
   private static final String ANSI_RESET = "\u001B[0m";
 
   public static void displayWelcomeMessage() {
